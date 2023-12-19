@@ -1,0 +1,1201 @@
+body {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
+}
+
+/* App.js */
+#appPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 96vw;
+}
+
+#toolbar {
+  font-size: 18px;
+  letter-spacing: 5px;
+  padding-top: 10px;
+  width: 100vw;
+  height:40px;
+  color: rgba(0, 0, 0, 0.7);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#toolbar label {
+  margin-left: 50px;
+}
+
+.menuButtons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top:20px;
+}
+
+/*  */
+
+/* MenuButton.js */
+
+.menuButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap:6px;
+  color: grey;
+  border-radius: 30px;
+  font-size: 14px;
+  padding: 4px 20px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
+}
+
+.menuButton:hover, .selected {
+  background-color: rgba(0, 0, 0, 0.05);
+  color:rgb(32, 33, 37);
+}
+
+/*  */
+
+/* CatsSection.js, VetsSection.js, OwnersSection.js */
+
+.section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 60px;
+  padding-top:20px;
+}
+
+.section button {
+  height: 50px;
+  width: 50px;
+  font-size: xx-large;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+  margin:0px 10px 30px 10px;
+  color: #d32f2f;
+}
+
+/*  */
+
+/* CatInfo.js */
+
+.ageSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  color: palevioletred;
+}
+
+.age {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 3px;
+}
+
+.birthDay {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: end;
+  gap: 8px;
+}
+
+.age svg, .birthDay svg {
+  transform: scale(0.9);
+}
+
+.male {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color:#f68300e3;
+  gap: 5px;
+}
+
+.female {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+  color:#F6BE00;
+}
+
+.catInfoSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.catInfoSection label {
+  margin: 20px 0px 20px 25px;
+  font-size: 17px;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.owner {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color:rgb(54, 178, 157);
+}
+
+.owner div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color:darkmagenta;
+}
+
+.owner img {
+  height: 25px;
+  width: 25px;
+}
+
+.line {
+  background-color: red;
+  height: 2px;
+  width: 150px;
+  margin: 0px 20px 15px 95px;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 5px;
+  font-size: 15px;
+}
+
+.avatar {
+  position: relative;
+  top: 0px;
+  left: 70px;
+  height: 150px;
+  width: 150px;
+  box-shadow: -1px 2px 1px 0 rgba(0, 0, 0, 0.2), -1px -2px 1px 0 rgba(0, 0, 0, 0.2);
+}
+
+.avatarHover {
+  position: relative;
+  top: 0px;
+  left: 70px;
+  height: 150px;
+  width: 150px;
+  box-shadow: -1px 2px 3px 0 rgba(0, 0, 0, 0.5), -1px -2px 3px 0 rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.catFrame {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  height: 215px;
+  width: 300px;
+  box-shadow: 2px 1px 3px 0 rgba(0, 0, 0, 0.1), -1px 1px 6px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  text-align: center;
+  padding: 10px;
+}
+
+.catFrameHover {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  height: 215px;
+  width: 300px;
+  border-radius: 3px;
+  text-align: center;
+  box-shadow: 1px -1px 4px 0 rgba(0, 0, 0, 0.2), -1px 1px 4px 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 10px;
+}
+
+.catFrameHover label{
+  cursor: pointer;
+}
+
+/*  */
+
+/* VetInfo.js, OwnerInfo.js */
+
+.phoneSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  color: rgb(112, 124, 216);
+}
+
+.mobile {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 3px;
+}
+
+.phone svg, .mobile svg {
+  transform: scale(0.9);
+}
+
+.phone {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: end;
+  gap: 8px;
+}
+
+.lineVet {
+  background-color: red;
+  height: 2px;
+  width: 250px;
+  margin: 0px 20px 15px 30px;
+}
+
+.address {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color:rgb(104, 178, 54);
+}
+
+.vetInfoSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.vetInfoSection label {
+  margin: 20px 0px 20px 20px;
+  font-size: 17px;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.vetFrame {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  height: 170px;
+  width: 310px;
+  box-shadow: 2px 1px 3px 0 rgba(0, 0, 0, 0.1), -1px 1px 6px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  text-align: center;
+  padding: 15px;
+}
+
+.vetFrame:hover {
+  box-shadow: 1px -1px 4px 0 rgba(0, 0, 0, 0.2), -1px 1px 4px 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.vetFrame:hover label{
+  cursor: pointer;
+}
+
+/*  */
+
+/* Dialog.js */
+
+.dialog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  height: 330px;
+  min-width: 600px;
+  width: auto;
+  color: white;
+}
+
+.dialog button {
+  cursor: pointer;
+  color: white;
+}
+
+.dialog button :hover{
+  cursor: pointer;
+}
+
+.dialog input:hover {
+  font-size: 13.2px;
+}
+
+.medVisitTypes {
+  display: flex;
+  justify-content: start;
+  flex-direction: row;
+  gap: 10px
+}
+
+.editDialog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  min-height: 300px;
+  width: 100%;
+}
+
+.editDialog button {
+  cursor: pointer;
+  color: white;
+}
+
+.editDialog input, .editDialog input:focus {
+  padding: 10px;
+  color: black;
+  font-family: 'Courier New', Courier, monospace;
+  border-color: rgba(0,0,0,0.3);
+  border-width: 1px;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.editDialog option {
+  border-color: rgba(0,0,0,0.3);
+  border-width: 1px;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.dialogTitle {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+  height: 40px;
+  width: 100%;
+  background-color: #d32f2f;
+}
+
+.dialogTitle label {
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  padding-top:10px;
+  width: 100%;
+}
+
+/*  */
+
+/* EditCatInfo.js */
+
+.editCatSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: start;
+  gap:40px;
+  padding-bottom: 12px;
+  width: 100%;
+}
+
+.editCatSection label {
+  font-family: 'Courier New', Courier, monospace;
+  padding-right: 8px;
+  transform: translate(15px, -9px) scale(0.75);
+  background-color: white;
+}
+
+.editCatSection button {
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.8);
+  position: relative;
+  top: -210px;
+  left: 30px;
+  background-color: white;
+  width: 30px;
+  height: 30px;
+}
+
+.editCatInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  font-size: 13px;
+  max-width: 200px;
+}
+
+.editCatInfoLarge label {
+  font-family: 'Courier New', Courier, monospace;
+  transform: translate(15px, -9px) scale(0.75);
+  background-color: white;
+  padding-right: 10px;
+}
+
+.editCatInfoLarge {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap:10px;
+  padding-bottom: 20px;
+}
+
+.editCatInfoLarge .css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input {
+  padding: 10px;
+  font-family: 'Courier New', Courier, monospace;
+  width: 300px;
+  font-size: 13px;
+}
+
+.deleteSectionCat {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  gap:40px;
+}
+
+.deleteSectionCat button{
+  height: 40px;
+  width: 40px;
+  color: rgba(0, 0, 0, 0.8);
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.deleteSectionCat button:hover{
+  background-color: transparent;
+}
+
+.updateSection {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: center;
+  gap:0px;
+  background-color: rgba(0, 0, 0, 0.04);
+  height: 240px;
+  padding: 0 20px;
+}
+
+.updateSection label {
+  cursor: pointer;
+  position: relative;
+  top: -202px;
+  left: 27px;
+  background-color: white;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  padding: 0px;
+}
+
+.updateSection label:hover {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+.updateSection span svg {
+  color: rgba(0, 0, 0, 0.8);
+  width: 30px;
+  height: 30px;
+}
+
+.deleteButton {
+  margin-top: 20px;
+  background-color: rgba(0, 0, 0, 0.04);
+  height: 50px;
+  width: 50px;
+  border-radius: 3px;
+}
+
+.deleteButton:hover {
+  background-color: rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+}
+
+/*  */
+
+/* EditOwnerInfo.js, EditVetInfo.js */
+
+.editOwnerInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  height: 210px;
+  width: 350px;
+  padding-bottom: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  padding:20px 0px;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.editOwnerSection button {
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.8);
+  position: relative;
+  top: -265px;
+  left:335px;
+  background-color: white;
+  width: 30px;
+  height: 30px;
+}
+
+.editVetSection button {
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.8);
+  position: relative;
+  top: -305px;
+  left:335px;
+  background-color: white;
+  width: 30px;
+  height: 30px;
+}
+
+.editVetInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+  height: 250px;
+  width: 350px;
+  padding-bottom: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  padding:20px 0px;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.editVetInfo input, .editOwnerInfo input{
+  width: 250px;
+}
+
+.editVetInfo label, .editOwnerInfo label {
+  font-family: 'Courier New', Courier, monospace;
+  transform: translate(10px, -8px) scale(0.7);
+  background-color: rgb(245, 245, 245);
+}
+
+/*  */
+
+/* DatePicker.js */
+
+.datePicker label {
+  font-weight: 100;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: white;
+  padding-top:0px;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.6);
+  padding-right: 13px;
+  width: auto;
+}
+
+.datePicker input{
+  font-weight: 100;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 13px;
+  width: 180px;
+}
+
+.datePicker input:hover{
+  cursor: pointer;
+}
+
+.emptyDate input{
+  color: white;
+}
+
+/*  */
+
+/* MedicalVisitsInfo.js */
+
+.canceledFilter {
+  color: rgba(255,0,0,0.6);
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.pastFilter {
+  color: #989595;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.pendingFilter {
+  color: rgba(141, 222, 48, 0.8);
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.filters {
+  display: flex;
+  justify-content: start;
+  flex-direction: row;
+  align-items: center;
+  font-size: 15px;
+  gap: 10px;
+  width: 75vw;
+  position: relative;
+  top:50px;
+}
+
+.catMedVisitsSection {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.medVisitsSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 95vw;
+}
+
+.medVisitsSection label {
+  position: relative;
+  top: 8px;
+  left: -400px;
+  background-color: white;
+  padding: 0px 2px;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 15px;
+  font-weight: 600;
+  padding: 0 7px;
+}
+
+.medVisits {
+  height: 212px;
+  overflow-x:auto;
+  width:80vw;
+  margin: 0px 20px 20px 20px;
+  border: 1.5px;
+  border-style: solid;
+  border-radius: 4px;
+  border-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  padding-left: 15px;
+  padding-top: 30px;
+}
+
+.medVisits button {
+  height: 50px;
+  width: 50px;
+  font-size: xx-large;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+  margin:0px 10px 30px 10px;
+  color: #d32f2f;
+}
+
+/*  */
+
+/* MedicalVisit.js */
+
+.medicalVisit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  text-align: center;
+  min-width: 140px;
+  width: 150px;
+  max-width: 150px;
+  font-weight: 600;
+  font-size: 14px;
+  height: 170px;
+  padding: 0px 3px;
+  margin: 10px 20px;
+}
+
+.medicalVisit:hover{
+  cursor: pointer;
+  background-color: rgba(205, 198, 198, 0.15);
+  box-shadow: 1px -1px 4px 0 rgba(0, 0, 0, 0.2), -1px 1px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.medicalVisit p {
+  margin: 0px;
+}
+
+.medicalVisit img{
+  height: 80px;
+  width: 80px;
+  margin: 10px;
+}
+
+.medicalVisit div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.medicalVisit svg {
+  height: 13px;
+  width: 13px;
+}
+
+.medVisitDate {
+  color: tomato;
+}
+
+.canceled, .canceled:hover {
+  background-color: rgba(255,0,0,0.3);
+}
+
+.past, .past:hover {
+  background-color: #d0d0d0;
+}
+
+.canceledPast, .canceledPast:hover {
+  background-color: rgba(182, 112, 103, 0.4);
+}
+
+/*  */
+
+/* MedVisitType.js */
+
+.medVisitType {
+  min-height: 90px;
+  width: 100px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+  text-align: center;
+}
+
+.medVisitTypeSelected {
+  min-height: 90px;
+  width: 100px;
+  border-style: solid;
+  box-shadow: 1px 1px 6px 0 rgba(0, 0, 0, 0.4), -1px -1px 6px 0 rgba(0, 0, 0, 0.4);
+  border-width: 4px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.medVisitType img, .medVisitTypeSelected img {
+  height: 60px;
+  width: 60px;
+  border-radius: 3px;
+  text-align: center;
+  padding: 10px 0px;
+}
+
+.medVisitType:hover {
+  box-shadow: 1px -1px 4px 0 rgba(0, 0, 0, 0.2), -1px 1px 4px 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  background-color: rgba(205, 198, 198, 0.15);
+}
+
+.medVisitTypeSelected:hover {
+  cursor: pointer;
+  box-shadow: 1px 1px 6px 0 rgba(0, 0, 0, 0.5), -1px -1px 6px 0 rgba(0, 0, 0, 0.5);
+}
+
+.medVisitType p, .medVisitTypeSelected p {
+  font-size: 12px;
+  color: black;
+  padding: 0px;
+  margin-top: 0px;
+}
+
+/*  */
+
+/* EditMedVisitsInfo.js */
+
+.parTreatmentSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: start;
+  gap: 50px;
+  padding-top: 10px;
+  width: 500px;
+  height: 250px;
+}
+
+.parTreatmentSection img {
+  height: 150px;
+  width: 150px;
+}
+
+.parTreatmentSection button {
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.8);
+  position: relative;
+  top: -107px;
+  left: 10px;
+  background-color: white;
+  width: 30px;
+  height: 30px;
+}
+
+.parTreatmentSection .deleteSection {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: end;
+  gap:0px;
+  width: 155px;
+  background-color: rgba(0, 0, 0, 0.04);
+  border-radius: 3px;
+  height: 215px;
+}
+
+.parTreatmentInfo label, .sterilizationInfo label, .vaccinationInfo label, .surgeryInfo label, .microchipInfo label, .bloodTestInfo label, .appointmentInfo label {
+  font-family: 'Courier New', Courier, monospace;
+  padding: 0px 13px;
+  transform: translate(15px, -9px) scale(0.75);
+  background-color: white;
+  width: fit-content;
+}
+
+.parTreatmentInfo input {
+  width: 180px;
+}
+
+.parTreatmentInfo, .bloodTestInfo, .microchipInfo, .surgeryInfo, .sterilizationInfo, .appointmentInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  font-size: 13px;
+  max-width: 200px;
+}
+
+.microchipSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: start;
+  gap: 50px;
+  padding-bottom: 20px;
+}
+
+.microchipSection .deleteSection {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: end;
+  gap:0px;
+  width: 180px;
+  background-color: rgba(0, 0, 0, 0.04);
+  border-radius: 3px;
+  height: 237px;
+}
+
+.bloodTestSection button:hover, .microchipSection button:hover, .vaccinationSection button:hover, .parTreatmentSection button:hover, .appointmentSection button:hover, .sterilizationSection button:hover, .surgerySection button:hover {
+  background-color: lightgray;
+}
+
+.microchipSection button {
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.8);
+  position: relative;
+  top: -115px;
+  background-color: white;
+  width: 30px;
+  height: 30px;
+}
+
+.microchipSection img {
+  height: 150px;
+  width: 150px;
+  margin-right: 15px;
+  margin-bottom: 10px;
+}
+
+.vaccinationInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 10px;
+}
+
+.vaccinationSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: start;
+  gap: 50px;
+  padding-bottom: 20px;
+  height: 320px;
+  font-size: 13px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.vaccinationSection .deleteSection {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: end;
+  gap:0px;
+  width: 180px;
+  background-color: rgba(0, 0, 0, 0.04);
+  border-radius: 3px;
+  height: 310px;
+}
+
+.vaccinationSection button {
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.8);
+  position: relative;
+  top: -155px;
+  left: 12px;
+  background-color: white;
+  width: 30px;
+  height: 30px;
+}
+
+.vaccinationSection img {
+  height: 165px;
+  width: 165px;
+  margin-right: 10px;
+}
+
+.bloodTestSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: start;
+  gap: 40px;
+  padding-top: 10px;
+  width: 500px;
+  height: 295px;
+}
+
+.bloodTestSection button {
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.8);
+  position: relative;
+  top: -133px;
+  left: -15px;
+  background-color: white;
+  width: 30px;
+  height: 30px;
+}
+
+.bloodTestSection .deleteSection {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap:0px;
+  width: 170px;
+  background-color: rgba(0, 0, 0, 0.04);
+  border-radius: 3px;
+  height: 265px;
+  margin-left: 25px;
+}
+
+.bloodTestSection img {
+  height: 140px;
+  width: 140px;
+}
+
+.bloodTestSection .MuiInputBase-root {
+  width: 250px;
+}
+
+.sterilizationSection button {
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.8);
+  position: relative;
+  top: -112px;
+  left: 20px;
+  background-color: white;
+  width: 30px;
+  height: 30px;
+}
+
+.sterilizationSection .deleteSection {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: end;
+  gap:0px;
+  width: 160px;
+  background-color: rgba(0, 0, 0, 0.04);
+  border-radius: 3px;
+  height: 202px;
+  margin-left: 30px;
+  height: 225px;
+}
+
+.sterilizationSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: start;
+  gap: 30px;
+  padding-bottom: 20px;
+  width: 500px;
+}
+
+.sterilizationSection img {
+  height: 165px;
+  width: 165px;
+}
+
+.sterilizationSection .MuiInputBase-root {
+  width: 250px;
+}
+
+.surgerySection button {
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.8);
+  position: relative;
+  top: -115px;
+  left: 15px;
+  background-color: white;
+  width: 30px;
+  height: 30px;
+}
+
+.surgerySection .deleteSection {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: end;
+  gap:0px;
+  width: 160px;
+  background-color: rgba(0, 0, 0, 0.04);
+  border-radius: 3px;
+  height: 230px;
+}
+
+.surgerySection img {
+  height: 160px;
+  width: 160px;
+  margin: 0px 0px 10px 0px;
+}
+
+.surgerySection .MuiInputBase-root {
+  width: 220px;
+}
+
+.surgerySection {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: start;
+  gap: 50px;
+  padding-bottom: 20px;
+  padding-right: 20px;
+}
+
+.appointmentSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: start;
+  gap: 50px;
+  padding-top: 10px;
+  width: 500px;
+  height: 230px;
+}
+
+.appointmentSection button {
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.8);
+  position: relative;
+  top: -90px;
+  left: 4px;
+  background-color: white;
+  width: 30px;
+  height: 30px;
+}
+
+.appointmentSection .deleteSection {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: end;
+  gap:0px;
+  width: 180px;
+  background-color: rgba(0, 0, 0, 0.04);
+  border-radius: 3px;
+  height: 180px;
+}
+
+.appointmentSection img {
+  height: 140px;
+  width: 140px;
+  margin-right: 23px;
+  margin-bottom: 20px;
+}
+
+/*  */
+
+/* CheckBox.js */
+
+.checkBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  align-content: start;
+  gap: 3px;
+  height: 15px;
+  font-weight: 500;
+  font-size: 14px;
+  text-wrap: nowrap;
+}
+
+.checkBox span {
+  padding-left: 0px;
+}
+
+.checkBox input {
+  width: 15px;
+}
+
+/*  */
+
+.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.MuiSelect-select {
+  padding: 10px;
+  font-family: 'Courier New', Courier, monospace;
+  width: 158px;
+  font-size: 13px;
+}
+
+.css-1sqnrkk-MuiInputBase-input-MuiOutlinedInput-input {
+  font-family: 'Courier New', Courier, monospace !important;
+}
+
+textarea {
+  cursor: pointer;
+}
+
+.MuiOutlinedInput-input {
+  font-size: 14px !important;
+}
+
